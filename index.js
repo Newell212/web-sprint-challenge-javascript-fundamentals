@@ -16,7 +16,7 @@ function myFunction() {
 //myFunction();
 
 //🚀🚀🚀 ⬇️ 📝 Explanation ⬇️ 📝 🚀🚀🚀: 
-
+// Because nestedFunction is in the scope of myFunction and nestedFunction can reach out and grab internal
 
 
 
@@ -30,9 +30,12 @@ function myFunction() {
 💡 NOTE: you may use a for loop for this function if you wish 
 */
 
-function summation(/*Your Code Here*/) {
-  /*Your Code Here*/
-
+function summation(number) {
+  let sum = 0
+  for(let i = 0; i <= number; i++) {
+   sum += i
+  }
+  return sum
   }
  
 
@@ -60,8 +63,13 @@ const zooAnimals = [
   💡 NOTE: the array returned should be an array of strings, and each string should follow this pattern: "name: {name}, scientific: {scientific name}"
   */
 
-  function animalNames(/*Your Code Here*/){
-    /*Your Code Here*/
+  function animalNames(zooAnimals) {
+    var displayNames = [];
+    
+    zooAnimals.forEach((animal) => {
+      displayNames.push(`name: ${animal.animal_name}, scientific: ${animal.scientific_name}`)
+    })
+    return displayNames;
   }
   
 
@@ -75,8 +83,10 @@ const zooAnimals = [
   💡 NOTE: Do some research for other methods that can help help you
   */
 
-  function lowerCaseNames(/*Your Code Here*/){
-    /*Your Code Here*/
+  function lowerCaseNames(zooAnimals){
+    return zooAnimals.map((zooAnimal) => 
+      `${zooAnimal.animal_name.toLowerCase()}`
+    )
   }
   
   
